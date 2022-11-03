@@ -1,7 +1,7 @@
-# JuiceBox, Part 1 - Databases
+# JuiceBox, Part 2 - Web Servers
 
-## Fullstack Week #6
+## Fullstack Week #8
 
-*Madi Webb* **11/3/2022**
+*Madi Webb* **11/8/2022**
 
 Hey Matt
