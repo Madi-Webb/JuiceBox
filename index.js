@@ -1,9 +1,15 @@
 const PORT = 3000;
+// Imports
 const express = require('express');
-const server = express();
 const apiRouter = require('./api');
 const morgan = require('morgan');
 const { client } = require('./db');
+require('dotenv').config();
+
+
+const server = express();
+
+// Middleware
 
 server.use(morgan('dev'));
 
@@ -18,16 +24,6 @@ server.use((req, res, next) => {
 });
 
 server.use('/api', apiRouter);
-
-// server.use('/api', (req, res, next) => {
-//     console.log("A request was made to /api");
-//     next();
-// });
-
-// server.get('/api', (req, res, next) => {
-//     console.log("A get request was made to /api");
-//     res.send({ message: "success" });
-// });
 
 client.connect();
 
